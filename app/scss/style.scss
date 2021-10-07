@@ -1,0 +1,50 @@
+@import 'vars';
+@import 'global';
+@import 'fonts';
+
+.header__top-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 91px;
+}
+.header__text{
+    margin-left: auto;
+    margin-right: 50px;
+    span{
+        color: $red;
+    }
+}
+.header__btn{
+    width: 72px;   
+    padding: 4px ;
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 12px;   
+}
+.header__btn-login{
+    background-color: $green;
+}
+.header__btn-register{
+    background-color: $red;
+    margin-left: 5px;
+}
+
+.header__menu{    
+    background-color: $bg;   
+    ul{
+        height: 60px;
+        display: flex;
+        align-items: center;
+        li{
+            font-family: 'Roboto', sans-serif;    
+            color: #fff;
+            font-size: 14px;
+            font-weight: 500;            
+            & + li{
+                margin-left: 35px;
+            }
+        }
+    }
+}
