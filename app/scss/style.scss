@@ -1,0 +1,102 @@
+@import 'vars';
+@import 'global';
+@import 'fonts';
+
+.header__top-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 91px;
+}
+.header__text{
+    margin-left: auto;
+    margin-right: 50px;
+    span{
+        color: $red;
+    }
+}
+.header__btn{
+    width: 72px;   
+    padding: 4px ;
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 12px;   
+}
+.header__btn-login{
+    background-color: $green;
+}
+.header__btn-register{
+    background-color: $red;
+    margin-left: 5px;
+}
+
+.header__menu{    
+    background-color: $bg;   
+    ul{
+        height: 60px;
+        display: flex;
+        align-items: center;
+        li{
+            font-family: 'Roboto', sans-serif;    
+            color: #fff;
+            font-size: 14px;
+            font-weight: 500;            
+            & + li{
+                margin-left: 35px;
+            }
+        }
+    }
+}
+.search{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 533px;
+}
+.search__inner{
+    text-align: center;
+    padding: 150px 0 100px;
+    color: #fff;
+    &-title{
+        font-size: 48px;
+        line-height: 72px;
+        font-weight: 700;       
+        margin-bottom: 10px;
+    }
+    &-text{
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 500;
+        margin-bottom: 50px;
+    }
+    &-form{
+        max-width: 670px;
+        margin: 0 auto;
+        position: relative;
+        input{
+            display: block;
+            width: 100%;
+            height: 56px;
+            border-radius: 4px;
+            box-shadow: 0px 1px 10px 0px rgba(124, 178, 64, 0.75);
+            border: none;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 0 60px 0 25px;
+
+            &::placeholder{
+                color: #b7c3c8;
+                font-weight: 500;
+            }          
+        }
+        button{
+            position: absolute;
+            border: none;
+            background-color: transparent;
+            right: 15px;
+            top: 17px;
+            cursor: pointer;
+        }
+    }
+}
