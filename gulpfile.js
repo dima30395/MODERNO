@@ -8,6 +8,8 @@ const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
 
+
+
 function browsersync() {
     browserSync.init({
         server: {
@@ -40,7 +42,9 @@ function images(){
 function script() {
     return src([
         'node_modules/jquery/dist/jquery.js',
-        'app/js/main.js'
+        'app/js/main.js',
+        'node_modules/mixitup/dist/mixitup.js',
+        
     ])
         .pipe(concat('main.min.js'))
         .pipe(uglify())
@@ -83,6 +87,7 @@ exports.browsersync = browsersync;
 exports.script = script;
 exports.images = images;
 exports.cleanDist = cleanDist;
+// exports.mixitup = mixitup;
 
 exports.build = series(cleanDist, images, build);
 exports.default = parallel(styles, script, browsersync, watching);
