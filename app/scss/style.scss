@@ -39,10 +39,9 @@
         display: flex;
         align-items: center;
         li{
-            font-family: 'Roboto', sans-serif;    
+            @include f500;   
             color: #fff;
-            font-size: 14px;
-            font-weight: 500;            
+            font-size: 14px;           
             & + li{
                 margin-left: 35px;
             }
@@ -64,13 +63,13 @@
     &-title{
         font-size: 48px;
         line-height: 72px;
-        font-weight: 700;       
+        @include f700;      
         margin-bottom: 10px;
     }
     &-text{
         font-size: 20px;
         line-height: 30px;
-        font-weight: 500;
+        @include f500;
         margin-bottom: 50px;
     }
     &-form{
@@ -85,13 +84,12 @@
             box-shadow: 0px 1px 10px 0px rgba(124, 178, 64, 0.75);
             border: none;
             font-size: 14px;
-            font-weight: 500;
+            @include f500;
             padding: 0 60px 0 25px;
 
             &::placeholder{
-                font-family: 'Roboto', sans-serif;
+                @include f500;
                 color: #b7c3c8;
-                font-weight: 500;
             }          
         }
         button{
@@ -115,9 +113,8 @@
     margin-bottom: 58px;
     color: $bg;
     button{
-        font-family: 'Roboto', sans-serif;
+        @include f500;
         font-size: 14px;        
-        font-weight: 500;
         padding: 13px 20px;
         border: none;
         min-width: 70px;
@@ -159,12 +156,12 @@
         padding: 10px 30px 9px;
         align-items: center;
         min-height: 90px;        
-        font-family: 'Roboto', sans-serif;
+        @include f500;
         border-bottom: 1px solid #e7ecf2; 
     }
     &-name{
         max-width: 310px;                     
-        font-weight: 500;
+        @include f500;
     }
     &-title{       
         display: block;
@@ -178,7 +175,7 @@
     }
     &-price{
         font-size: 20px;
-        font-weight: 700;
+        @include f700;
     }
     &-info{
         display: flex;
@@ -202,10 +199,8 @@
             margin-right: 14px; 
         }
         span{
-            font-family: 'Roboto', sans-serif;
-            font-size: 14px;
-            font-weight: 500;
-              
+            @include f500;
+            font-size: 14px;             
         }
     } 
     &-star{
@@ -265,8 +260,63 @@
     }
 }
 
-
-
-
-
 // end products-slider 
+// start advantages
+
+.advantages{
+    background-color: $bg;
+    padding: 105px 0;
+    color: #fff;  
+}
+.advantages__inner{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.advantages__item{
+    flex-basis: 340px;
+    margin-top: 40px;
+    padding: 0 10px;
+    .advantages__item-images{
+        path{
+             transition: all .3s;
+        }
+        g{
+            path{
+            transition: all .3s;
+            }
+        }
+    }
+    &:hover{
+        .advantages__item-title{
+            color: $green;
+        }
+        .advantages__item-images{
+            path{
+                fill: $green;
+            }
+            g{
+                path{
+                fill: #fff;
+                }
+            }
+        }
+
+    }
+    &-images{
+        margin-bottom: 30px;
+    }
+    &-title{
+        @include f500;
+        font-size: 24px;
+        margin-bottom: 20px;
+        transition: all .3s;
+    }
+    &-text{
+        color: #b0bec5;
+    } 
+}
+
+
+
+// end advantages 

@@ -1,3 +1,4 @@
+
 html{
     box-sizing: border-box;
 }
@@ -40,7 +41,7 @@ body{
     text-align: center;
     font-size: 36px;
     line-height: 60px;
-    font-weight: 700;
+    @include f700;
     margin-bottom: 35px;
     color: &bg;
 }
