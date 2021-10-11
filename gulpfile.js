@@ -44,6 +44,8 @@ function script() {
         'node_modules/jquery/dist/jquery.js',
         'app/js/main.js',
         'node_modules/mixitup/dist/mixitup.js',
+        'node_modules/rateyo/src/jquery.rateyo.js',
+        'node_modules/slick-carousel/slick/slick.js'
         
     ])
         .pipe(concat('main.min.js'))
@@ -53,7 +55,9 @@ function script() {
 }
 
 function styles() {
-    return src('app/scss/**/*.scss')
+    return src(['app/scss/**/*.scss',
+        'node_modules/slick-carousel/slick/slick.css',
+        'node_modules/rateyo/src/jquery.rateyo.css'])
         .pipe(sass({ outputStyle: 'compressed' }))
         .pipe(concat('style.min.css'))
         .pipe(autoprefixer({
@@ -70,6 +74,7 @@ function build(){
         'app/fonts/**/*',
         'app/js/main.min.js',
         'app/*.html',
+
     ],  {base: 'app'})
         .pipe(dest('dist'))
 }
