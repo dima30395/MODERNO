@@ -358,3 +358,30 @@
 
 
 // end  author
+// start tutorials
+
+.tutorials{
+    padding: 50px 0 120px;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item{
+        flex-basis: 370px;    
+        &-img{
+            min-height: 270px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        &-title{
+            text-align: center;
+            padding: 30px 10px;
+            background-color: #f8f8f8;
+            font-size: 24px;
+            @include f700;
+        }
+    }
+}
+
+// end tutorials
